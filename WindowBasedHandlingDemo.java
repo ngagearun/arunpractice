@@ -14,7 +14,7 @@ public class WindowBasedHandlingDemo {
 
 	public static void main(String[] args) throws IOException {
 	;
-		
+		//Adding commentss
 		WebDriver driver =new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
