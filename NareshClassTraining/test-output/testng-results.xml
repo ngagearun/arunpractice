@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="4" failed="0" total="4" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="flikart" duration-ms="43" started-at="2020-07-06T03:41:35Z" finished-at="2020-07-06T03:41:35Z">
+    <groups>
+      <group name="regression">
+        <method signature="Electronics.addMIMobiles()[pri:0, instance:com.flipkart.businessscripts.Electronics@5fdba6f9]" name="addMIMobiles" class="com.flipkart.businessscripts.Electronics"/>
+        <method signature="Men.addshoeitemtocart()[pri:0, instance:com.flipkart.businessscripts.Men@4ae82894]" name="addshoeitemtocart" class="com.flipkart.businessscripts.Men"/>
+        <method signature="Electronics.addMIMobiles()[pri:0, instance:com.flipkart.businessscripts.Electronics@5427c60c]" name="addMIMobiles" class="com.flipkart.businessscripts.Electronics"/>
+        <method signature="Men.addshoeitemtocart()[pri:0, instance:com.flipkart.businessscripts.Men@15bfd87]" name="addshoeitemtocart" class="com.flipkart.businessscripts.Men"/>
+      </group> <!-- regression -->
+    </groups>
+    <test name="ChromeBrowserTesting" duration-ms="29" started-at="2020-07-06T03:41:35Z" finished-at="2020-07-06T03:41:35Z">
+      <class name="com.flipkart.businessscripts.Electronics">
+        <test-method status="SKIP" signature="moveToElectronics()[pri:0, instance:com.flipkart.businessscripts.Electronics@5fdba6f9]" name="moveToElectronics" is-config="true" duration-ms="0" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moveToElectronics -->
+        <test-method status="SKIP" signature="addMIMobiles()[pri:0, instance:com.flipkart.businessscripts.Electronics@5fdba6f9]" name="addMIMobiles" duration-ms="8" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMIMobiles -->
+      </class> <!-- com.flipkart.businessscripts.Electronics -->
+      <class name="com.flipkart.businessscripts.Men">
+        <test-method status="SKIP" signature="addshoeitemtocart()[pri:0, instance:com.flipkart.businessscripts.Men@4ae82894]" name="addshoeitemtocart" duration-ms="1" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addshoeitemtocart -->
+      </class> <!-- com.flipkart.businessscripts.Men -->
+    </test> <!-- ChromeBrowserTesting -->
+    <test name="FiefoxBrowserTesting" duration-ms="43" started-at="2020-07-06T03:41:35Z" finished-at="2020-07-06T03:41:35Z">
+      <class name="com.flipkart.businessscripts.Electronics">
+        <test-method status="FAIL" signature="launchbrowser(java.lang.String, java.lang.String)[pri:0, instance:com.flipkart.businessscripts.Electronics@5427c60c]" name="launchbrowser" is-config="true" duration-ms="0" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browsername' is required by @Configuration on method launchbrowser but has not been marked @Optional or defined
+in C:\Users\Lenovo\Documents\NareshClassTraining\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browsername' is required by @Configuration on method launchbrowser but has not been marked @Optional or defined
+in C:\Users\Lenovo\Documents\NareshClassTraining\testng.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:159)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:372)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:90)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:296)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser -->
+        <test-method status="SKIP" signature="moveToElectronics()[pri:0, instance:com.flipkart.businessscripts.Electronics@5427c60c]" name="moveToElectronics" is-config="true" duration-ms="0" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moveToElectronics -->
+        <test-method status="SKIP" signature="addMIMobiles()[pri:0, instance:com.flipkart.businessscripts.Electronics@5427c60c]" name="addMIMobiles" duration-ms="1" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMIMobiles -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.flipkart.businessscripts.Electronics@5427c60c]" name="teardown" is-config="true" duration-ms="0" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.flipkart.businessscripts.Electronics -->
+      <class name="com.flipkart.businessscripts.Men">
+        <test-method status="SKIP" signature="addshoeitemtocart()[pri:0, instance:com.flipkart.businessscripts.Men@15bfd87]" name="addshoeitemtocart" duration-ms="1" started-at="2020-07-06T09:11:35Z" finished-at="2020-07-06T09:11:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addshoeitemtocart -->
+      </class> <!-- com.flipkart.businessscripts.Men -->
+    </test> <!-- FiefoxBrowserTesting -->
+  </suite> <!-- flikart -->
+</testng-results>
