@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [flikart]" parallel="none">
+  <parameter name="browsername" value="chrome"/>
+  <parameter name="appurl" value="https://www.flipkart.com/"/>
+  <test name="ChromeBrowserTesting(failed)" parallel="none">
+    <parameter name="browsername" value="chrome"/>
+    <parameter name="appurl" value="https://www.flipkart.com/"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.flipkart.businessscripts.Men">
+        <methods>
+          <include name="movetoMen"/>
+          <include name="teardown"/>
+          <include name="launchbrowser"/>
+          <include name="addshoeitemtocart"/>
+        </methods>
+      </class> <!-- com.flipkart.businessscripts.Men -->
+      <class name="com.flipkart.businessscripts.Electronics">
+        <methods>
+          <include name="moveToElectronics"/>
+        </methods>
+      </class> <!-- com.flipkart.businessscripts.Electronics -->
+    </classes>
+  </test> <!-- ChromeBrowserTesting(failed) -->
+</suite> <!-- Failed suite [flikart] -->
