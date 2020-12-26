@@ -15,7 +15,7 @@ import com.testng.ReusableTestNG;
 
 public class Men extends ReusableTestNG {
 	
-	@BeforeMethod
+	@BeforeMethod(groups={"regression"})
 	
 	public void movetoMen() throws InterruptedException{
 		Thread.sleep(4000);

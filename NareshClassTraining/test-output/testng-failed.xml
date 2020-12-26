@@ -1,52 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [flikart]" parallel="tests">
-  <parameter name="browsername" value="firefox"/>
-  <parameter name="appurl" value="https://www.flipkart.com/"/>
-  <listeners>
-    <listener class-name="com.flipkart.businessscripts.TestListener"/>
-    <listener class-name="com.flipkart.businessscripts.RetryListenerClass"/>
-  </listeners>
-  <test name="ChromeBrowserTesting(failed)" parallel="tests">
-    <parameter name="browsername" value="chrome"/>
-    <parameter name="appurl" value="https://www.flipkart.com/"/>
-    <groups>
-      <run>
-        <include name="regression"/>
-      </run>
-    </groups>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
       <class name="com.flipkart.businessscripts.Electronics">
         <methods>
+          <include name="moveToElectronics"/>
           <include name="addMIMobiles"/>
+          <include name="teardown"/>
+          <include name="launchbrowser"/>
         </methods>
       </class> <!-- com.flipkart.businessscripts.Electronics -->
-      <class name="com.flipkart.businessscripts.Men">
-        <methods>
-          <include name="addshoeitemtocart"/>
-        </methods>
-      </class> <!-- com.flipkart.businessscripts.Men -->
     </classes>
-  </test> <!-- ChromeBrowserTesting(failed) -->
-  <test name="FiefoxBrowserTesting(failed)" parallel="tests">
-    <parameter name="browsername" value="firefox"/>
-    <parameter name="appurl" value="https://www.flipkart.com/"/>
-    <groups>
-      <run>
-        <include name="regression"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="com.flipkart.businessscripts.Electronics">
-        <methods>
-          <include name="addMIMobiles"/>
-        </methods>
-      </class> <!-- com.flipkart.businessscripts.Electronics -->
-      <class name="com.flipkart.businessscripts.Men">
-        <methods>
-          <include name="addshoeitemtocart"/>
-        </methods>
-      </class> <!-- com.flipkart.businessscripts.Men -->
-    </classes>
-  </test> <!-- FiefoxBrowserTesting(failed) -->
-</suite> <!-- Failed suite [flikart] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

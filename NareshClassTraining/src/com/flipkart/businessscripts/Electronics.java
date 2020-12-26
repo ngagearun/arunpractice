@@ -36,6 +36,18 @@ public class Electronics extends ReusableTestNG{
 		mouseHover(Constants.electronics);
 	}
 	
+	public static boolean verifyproductpage(By locatorname){
+		boolean status=false;
+		try{
+			status=driver.findElement(locatorname).isDisplayed();
+			driver.findElement(locatorname).click();
+			
+		}catch(Exception e){
+         driver.findElement(By.xpath("//span[text()='Next']")).click();		
+      }
+		return status;
+	}
+		
 	@Test(priority=1,groups={"regression1"})
 	public static void verifyoutofstockforsamsungmobileunder15k() throws InterruptedException, AWTException{
 		
@@ -43,14 +55,19 @@ public class Electronics extends ReusableTestNG{
 		Thread.sleep(4000);
 		List<WebElement> no_of_elements=driver.findElements(By.xpath("//*[@id='container']/div/div[3]/div[3]/div"));
 		System.out.println(no_of_elements.size());
+		
 		for(int i=0;i<5;i++){		
 			String text=driver.findElement(By.xpath("//*[@id='container']/div/div[3]/div[3]/div["+(i+1)+"]/div/div[1]/div[1]/h2")).getText();
 			if(text.equalsIgnoreCase("Samsung Mobile under ₹15K")){
 				click(By.xpath("//*[@id='container']/div/div[3]/div[3]/div["+(i+1)+"]/div/div[1]/div[2]/a/span"));
 				break;
 			}
-		}		
-		click(By.xpath("//div[contains(text(),'Samsung Galaxy J6 (Black, 64 GB)')]"));
+		}	
+		
+		while(!verifyproductpage(By.xpath("//div[contains(text(),'Samsung Galaxy J6 (Black, 64 GB)')]"))){
+			//click(By.xpath("//div[contains(text(),'Samsung Galaxy J6 (Black, 64 GB)')]"));
+		    }
+		
 		String main_window=driver.getWindowHandle();
 		Set<String> number_of_windows=driver.getWindowHandles();
 		System.out.println(number_of_windows.size());
