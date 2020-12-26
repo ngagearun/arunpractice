@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="applicationname" parallel="tests">
+ 
+   <listeners>
+<listener class-name="com.testng.TestListener" />
+<listener class-name="com.testng.RetryListenerClass" />
+</listeners> 
+  
+  <test name="FirefoxbrowserTestig">
+    <parameter name="browsername" value="firefox"></parameter>
+    <parameter name="appurl" value="https://www.mortgagecalculator.org/"></parameter>
+     <groups>
+  <run>
+   <include name="regression"></include>
+  </run>
+ </groups>
+     <classes>
+      <class name="com.testng.Rates"></class>
+       <class name="com.testng.Refinance"></class>
+     </classes>
+  </test>
+</suite>

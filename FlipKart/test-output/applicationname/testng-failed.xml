@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [applicationname]" parallel="tests">
+  <parameter name="browsername" value="firefox"/>
+  <parameter name="appurl" value="https://www.mortgagecalculator.org/"/>
+  <listeners>
+    <listener class-name="com.testng.TestListener"/>
+    <listener class-name="com.testng.RetryListenerClass"/>
+  </listeners>
+  <test name="FirefoxbrowserTestig(failed)" parallel="tests">
+    <parameter name="browsername" value="firefox"/>
+    <parameter name="appurl" value="https://www.mortgagecalculator.org/"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testng.Rates">
+        <methods>
+          <include name="launchapp"/>
+          <include name="closeapp"/>
+          <include name="mousehoveronFHAloans"/>
+        </methods>
+      </class> <!-- com.testng.Rates -->
+      <class name="com.testng.Refinance">
+        <methods>
+          <include name="moushoveronrefinance"/>
+          <include name="RefinanceCalculatortextpage"/>
+        </methods>
+      </class> <!-- com.testng.Refinance -->
+    </classes>
+  </test> <!-- FirefoxbrowserTestig(failed) -->
+</suite> <!-- Failed suite [applicationname] -->
