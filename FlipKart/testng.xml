@@ -16,7 +16,6 @@
   </run>
  </groups>
      <classes>
-      <class name="com.testng.Rates"></class>
        <class name="com.testng.Refinance"></class>
      </classes>
   </test>
